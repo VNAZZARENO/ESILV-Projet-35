@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "MYbPEEunr8e9PqT4NjuV1ciREGz2dhldr8/kWpuXU5iMb7BrBlSu6UZHNdxRPo2d5QHH404seOCFjMh44svogw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LeopoldPL\\Downloads\\Signaux_v2\\Signaux\\Signaux\\Signaux.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LeopoldPL\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512",
+    "C:\\Users\\LeopoldPL\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\LeopoldPL\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\LeopoldPL\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
