@@ -15,7 +15,7 @@ namespace Signaux
         public bool isValid = false;
         public double previousValue;
         public abstract string getName();
-        public abstract double getValue();
+        public abstract double getValue(bool flag = false);
         public abstract bool getIsCalculated();
         public abstract bool getIsValid();
         public abstract double GetPrevious_Value();

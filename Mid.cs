@@ -10,10 +10,20 @@ namespace Signaux
     {
         //Constructeur à reprendre avec plus d'informations
         private Feed data; //Le Feed contiendra un tableau des lignes du document avec un curseur
+        private double value;
+        private string name;
+        private bool isCalculated;
+        private bool isValid;
+        //private double previousValue;
 
-        public Mid(Feed data)
+
+        public Mid(Feed data, double value = 0, string name = "", bool isCalculated = false, bool isValid = false)
         {
             this.data = data;
+            this.value = value;
+            this.name = name;
+            this.isCalculated = isCalculated;
+            this.isValid = isValid;
         }
 
         public override double Value()
@@ -40,7 +50,6 @@ namespace Signaux
             }
 
             data.setCurseur(dates.IndexOf(dt)); //On trouve l'index auquel se trouve dt et on le décrémente (pas besoin de mettre -1 car on supprime la 1ère ligne)
-            //Console.WriteLine("Ce DateTime se trouve après la " + data.getCurseur() + "ème ligne");
             flag = true;
         }
 
@@ -58,8 +67,9 @@ namespace Signaux
             return name;
         }
 
-        public override double getValue()
+        public override double getValue(bool flag = false)
         {
+            if ((value == 0) || (flag == true)) { value = Value(); }
             return value;
         }
 
@@ -98,8 +108,8 @@ namespace Signaux
         }
         public override void Calculate()
         {
-            value = (!isCalculated && isValid) ? 7 * value : value;
-            isCalculated = true;
+            value = (!getIsCalculated() && getIsValid()) ? 7 * value : value;
+            setIsCalculated(true);
         }
         public override double GetPrevious_Value()
         {
