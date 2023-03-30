@@ -226,7 +226,7 @@ def export_data():
 
 root = tk.Tk()
 root.title("Input, File, and Date Range Retrieval")
-root.geometry("300x300")
+root.geometry("250x250")
 liste_dates = pd.date_range("2018-01-01", "2018-12-28", freq = '1D').date.tolist()
 liste_symbols = ['EURGBP', 'EurUSD', 'EURJPY']
 

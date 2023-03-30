@@ -119,11 +119,21 @@ xi_Hill_upper = sum(xi_hill_l)/len(xi_hill_l)
 beta = np.linspace(0.0001, 0.1, 1000000)
 beta_mle = beta_MLE(k=k, n=n, y_i=data, u=u_upper, beta=beta, xi=xi_Hill_upper)
 #### FIND 0 in BETA_MLE GIVES : ####
-zero_beta_mle = 0.72
+zero_beta_mle = 0.43
+
+#Beta_MLE graph to find the x_0 such that MLE(x_0) = 0
+# with the help of find_zero(L, beta)
+plt.figure(2, figsize=(1200/my_dpi, 700/my_dpi), dpi=my_dpi)
+plt.plot(beta, beta_mle, label = "Beta_MLE = ")
+plt.plot()
+plt.title('BETA_0 such that MLE(BETA_0) = 0')
+plt.grid()
+plt.legend()
+
 
 #GEV graph with parameters
 plt.figure(3, figsize=(1200/my_dpi, 700/my_dpi), dpi=my_dpi)
-y = np.linspace(-1, 1.1, 1000)
+y = np.linspace(-1, 3, 1000)
 g = GEV(y=y, u=u_upper, beta=zero_beta_mle, xi=xi_Hill_upper)
 plt.plot(y, g, label="GEV(y)")
 plt.title('Cumulative Distribution Function')
